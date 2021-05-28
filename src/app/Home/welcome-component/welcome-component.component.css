@@ -1,0 +1,29 @@
+.header-div
+{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+.btn-link
+{
+    color: white;
+    font-size: medium;
+}
+.col-md-4
+{
+    width: 500px;
+}
+.body
+{
+     font-size: medium;
+}
+.eachrow
+{
+    margin-top: 30px;
+}
+.hitlike
+{
+    color: red;
+}

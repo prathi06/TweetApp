@@ -1,0 +1,12 @@
+
+.headdiv {
+    background-color: #e0dfdf;
+    height: 50px;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+    font-family: emoji;
+    font-size: medium;
+    margin: 20px 100px 0px 100px;
+    border-radius: 20px;
+}

@@ -1,0 +1,47 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> 
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+
+</head>
+<div class="header-div">
+    <div style="color: white;padding-top: 15px;display: flex;">
+        <a routerLink="/home" class="btn btn-link">Home</a>
+        <a (click)="open()" class="btn btn-link">Reset Password</a>
+        <a (click)="PostTweet(content)" class="btn btn-link">Post Tweet</a>
+        <a routerLink="/mytweet" class="btn btn-link">My Tweets</a>
+    </div>
+    <div style="padding-top: 15px;margin-left: 500px;display: flex;flex-direction: row;color: white;">
+         <span style="
+             margin-top: 6px;
+             font-size: large;
+             font-size: large;
+             color: #e6e1e1;
+             text-transform: capitalize;
+             font-family: serif;">{{loginUser.email}}</span>
+         <a href="#" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Post the Tweet</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <textarea type="text"  class="md-textarea form-control" #postContent></textarea>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="[modal.close('Close click'),AddTweetToUser(postContent.value)]">Post</button>
+      <button type="button" class="btn btn-warning" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+  

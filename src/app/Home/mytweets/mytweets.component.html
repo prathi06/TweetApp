@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div style="padding-top: 50px;"></div>
+<div class="headdiv" *ngIf=" myTweets.tweet==undefined">
+   <span style="margin: 0px 25% 0px 42%;">No Postes Tweeted</span>
+</div>
+<div class="row headdiv" *ngFor="let data of myTweets.tweet" (click)="loadReplies(data)">
+    <div class="col-sm-3 col-md-6 col-lg-4">
+      Tweeted As &nbsp;<span style="
+          color: #1c3694;
+          font-size: large;
+          font-weight: 600;
+          text-transform: capitalize">{{data.postTweet}}</span>
+    </div>
+    <div class="col-sm-3 col-md-6 col-lg-4">
+      Poseted On 11/11/2021
+    </div>
+    <div class="col-sm-3 col-md-6 col-lg-4">
+      Likes {{data.count}}
+    </div>
+
+</div>
